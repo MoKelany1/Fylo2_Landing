@@ -1,0 +1,392 @@
+/* Start Variables */
+:root {
+    --v-dark-blue: hsl(243, 87%, 12%);
+    --ds-blue: hsl(238, 22%, 44%);
+    --bright-blue: hsl(224, 93%, 58%);
+    --mod-cyan: hsl(170, 45%, 43%);
+    --l-gryash-blue: hsl(240, 75%, 98%);
+    --l-gray: hsl(0, 0%, 75%);
+    --type-font: 'Open Sans', sans-serif;
+    --head-font: 'Raleway', sans-serif;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--type-font);
+}
+:focus {
+    outline: none;
+}
+button,
+i,
+li {
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover,li:hover {
+    transform: translateY(-10px);
+}
+h2 {
+    font-family: var(--head-font);
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    padding: 30px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo img {
+    width: 100px;
+    transition: .3s;
+}
+header .container .logo img:hover {
+    transform: translateX(10px);
+}
+header .container .nav {
+    font-family: var(--head-font);
+    font-size: 16px;
+}
+header .container .nav ul {
+    display: flex;
+}
+header .container .nav ul li {
+    padding: 10px 15px;
+}
+@media (max-width:767px) {
+    header .container .nav ul li {
+        padding: 10px;
+    }
+    header .container .logo img {
+        width: 80px;
+    }
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    margin-top: 60px;
+}
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+}
+.landing .container .text {
+    margin-top: 100px;
+    flex-basis: 50%;
+}
+.landing .container .text h2 {
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-size: 35px;
+}
+.landing .container .text p {
+    margin-bottom: 20px;
+}
+.landing .container .text .sub {
+    display: flex;
+    justify-content: space-between;
+}
+.landing .container .text .sub input {
+    flex-basis: 60%;
+    padding: 10px;
+    border: 1px solid #9b9999;
+    border-radius: 5px;
+}
+.landing .container .text .sub button {
+    flex-basis: 38%;
+    padding: 10px 0;
+    color: white;
+    background-color: var(--bright-blue);
+    border: none;
+    border-radius: 5px;
+}
+.landing .container .image {
+    flex-basis: 50%;
+    margin-left: 60px;
+}
+.landing .container .image img {
+    width: 100%;
+}
+@media (max-width:991px) {
+    .landing .container {
+        flex-direction: column;
+    }
+    .landing .container .image {
+        order: -1;
+        margin: 0;
+    }
+    .landing .container .text {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .landing .container .text h2 {
+        width: 100%;
+    }
+    .landing .container .text .sub {
+        flex-direction: column;
+    }
+    .landing .container .text .sub input {
+        margin-bottom: 15px;
+    }
+}
+/* End Landing */
+/* Start Productive */
+.productive {
+    margin-top: 200px;
+}
+.productive .container {
+    display: flex;
+    justify-content: space-between;
+}
+.productive .container .text {
+    flex-basis: 50%;
+}
+.productive .container > .image {
+    flex-basis: 40%;
+    margin-top: 70px;
+}
+.productive .container .image img {
+    width: 100%;
+}
+.productive .container .text > h2 {
+    font-size: 35px;
+}
+.productive .container .text > p {
+    margin: 30px 0;
+    width: 90%;
+    color: var(--ds-blue);
+}
+.productive .container .text .work {
+    display: flex;
+    border-bottom: 1px solid var(--mod-cyan);
+    width: fit-content;
+    color: var(--mod-cyan);
+    margin-bottom: 100px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.productive .container .text .work p {
+    margin-right: 10px;
+}
+.productive .container .text .testmonial {
+    border: 1px solid #e2dede;
+    border-radius: 10px;
+    padding: 20px 20px;
+    width: 68%;
+    box-shadow: 1px 1px 10px 0 #ddd , -1px -1px 10px 0 #ddd;
+}
+.productive .container .text .testmonial i {
+    margin-bottom: 15px;
+}
+.productive .container .text .testmonial .info {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+.productive .container .text .testmonial .info .image {
+    flex-basis: 10%;
+    margin-right: 10px;
+}
+.productive .container .text .testmonial .info {
+    margin-top: 20px;
+}
+.productive .container .text .testmonial .info .name {
+    flex-basis: 70%;
+}
+.productive .container .text .testmonial .info .name p {
+    margin-top: 15px;
+}
+.productive .container .text .testmonial .info .image img {
+    width: 60px;
+    border-radius: 50%;
+}
+@media (max-width:991px) {
+    .productive {
+        margin: 50px 0;
+    }
+    .productive .container {
+        flex-direction: column;
+    }
+    .productive .container > .image {
+        order: -1;
+    }
+    .productive .container .text > h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .productive .container .text > p {
+        width: 100%;
+    }
+    .productive .container .text .work {
+        margin-bottom: 30px;
+    }
+    .productive .container .text .testmonial {
+        width: 100%;
+    }
+    .productive .container .text .work,
+    .productive .container .text .testmonial {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End Productive */
+/* Start Access */
+.access {
+    background-color: var(--ds-blue);
+    margin-top: 100px;
+    padding: 60px 0;
+}
+.access .container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.access .container .text {
+    flex-basis: 43%
+}
+.access .container .form {
+    flex-basis: 40%
+}
+.access .container .text h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.access .container .form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+}
+.access .container .form button {
+    padding: 15px 25px;
+    background-color: var(--bright-blue);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+@media (max-width:991px) {
+    .access .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .access .container .text {
+        margin-bottom: 30px;
+    }
+    .access .container .form button {
+        width: 100%;
+    }
+    .access .container .text h2 {
+        font-size: 20px;
+    }
+}
+/* End Access */
+/* Start Footer */
+footer {
+    background-color: var(--v-dark-blue);
+    padding: 80px 0;
+}
+footer .container {
+    color: white;
+}
+footer .container li {
+    padding: 10px;
+}
+footer .container .logo {
+    margin-bottom: 30px;
+    transition: .3s;
+}
+footer .container .logo img {
+    transition: .3s;
+}
+footer .container .logo img:hover {
+    transform: translateX(20px);
+}
+footer .container .footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .footer-content .col-1 > div {
+    display: flex;
+    margin-bottom: 30px;
+}
+footer .container .footer-content .col-1 > div img {
+    margin-right: 20px;
+}
+footer .container .footer-content .col-4 {
+    display: flex;
+}
+footer .container .footer-content .col-4 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: .3s;
+}
+footer .container .footer-content .col-4 > div:hover {
+    transform: translateY(-10px);
+}
+@media (max-width: 991px) {
+    footer {
+        padding: 50px 0;
+    }
+    footer .container .footer-content {
+        flex-direction: column;
+    }
+    footer .container .footer-content .col-2,
+    footer .container .footer-content .col-3 {
+        margin-top: 30px;
+    }
+    footer .container .footer-content .col-4 {
+        margin: 30px auto 0;
+    }
+    footer .container .footer-content .col-4 > div {
+        margin: 0 10px;
+    }
+}
+/* End Footer */
